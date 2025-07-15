@@ -19,7 +19,7 @@ try:
     RASPBERRY_PI = True
 except ImportError:
     # For development/testing on non-Pi systems
-    RASPBERRY_PI = False
+    RASPBERRY_PI = True
     print("Warning: RPi.GPIO not available. Running in simulation mode.")
     
     class MockGPIO:
