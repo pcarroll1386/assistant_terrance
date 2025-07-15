@@ -1,0 +1,11 @@
+# Requirements for LCD Product Display System
+# Install on Raspberry Pi with: pip install -r requirements.txt
+
+# I2C communication library
+smbus2
+
+# GPIO control for Raspberry Pi (automatically available on Raspberry Pi OS)
+# RPi.GPIO
+
+# Note: RPi.GPIO is typically pre-installed on Raspberry Pi OS
+# If needed, install manually with: sudo apt-get install python3-rpi.gpio
