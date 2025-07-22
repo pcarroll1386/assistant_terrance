@@ -1,5 +1,6 @@
 import smbus2
 import time
+from LCD1602
 
 class PFCF574_12C(object):
     OUTPUT = 0
@@ -8,8 +9,7 @@ class PFCF574_12C(object):
         self.bus=smbus2.SMBus(1)
         self.address = address
         self.currentValue = 0
-        self.writeBype(0)
-
+        self.writeBype(0) 
     def readByte(self):
         return self.currentValue
     

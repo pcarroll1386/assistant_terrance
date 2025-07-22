@@ -1,14 +1,14 @@
-import smbus2
+import smbus
 import time
 
 class PFCF574_12C(object):
     OUTPUT = 0
     InPUT = 1
     def __init__(self, address):
-        self.bus=smbus2.smbus2.SMBus(1)
+        self.bus=smbus.SMBus(1)
         self.address = address
         self.currentValue = 0
-        self.writeBype(0)
+        self.writeByte(0)
 
     def readByte(self):
         return self.currentValue
@@ -27,9 +27,9 @@ class PFCF574_12C(object):
         elif(newvalue == 0):
             self.writeByte(value)
 def loop():
-    mcp = PFCF574_12C(0x27)
+    mcp = PFCF574_12C(0x3f)
     while True:
-        mcp.digitialWrite(3,1)
+        mcp.digitalWrite(3,1)
         print(f"Is 0xff? {mcp.readByte()}")
         time.sleep(1)
         mcp.writeByte(0x00)
