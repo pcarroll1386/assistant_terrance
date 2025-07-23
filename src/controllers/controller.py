@@ -8,6 +8,7 @@ from src.services.jobs_service import JobsService
 from src.services.job_task_service import JobTaskService
 from src.controllers.timer_controller import TimerController
 from src.controllers.input_controller import InputController
+from src.controllers.job_controller import JobController
 from src.schemas.job_schemas import JobsContainer, Job, Task
 
 
@@ -17,16 +18,10 @@ class Controller(object):
         """Initialize the controller."""
         self.job_service = JobsService()
         self.job_tasks = JobTaskService()
+        self.job_controller= JobController()
         self.lcd = LCD()
-        self.count = 0
-        self.current_job = None
-        self.current_job_task = None
         self.timer = TimerController()
         self.input_controller = InputController()
-        self.current_job_index = 0
-        self.current_task_index = 0
-        self.job_list = []
-        self.task_list = []
 
 
     def shutdown(self):
@@ -38,51 +33,6 @@ class Controller(object):
         self.input_controller._restore_terminal()
         sys.exit()
 
-    def set_current_job(self, job):
-        """Set the current job."""
-        self.current_job = job
-
-    def set_current_job_task(self, task: Task):
-        """Set the current job task."""
-        self.current_job_task = task
-
-    def next_job(self):
-        """Move to the next job in the list."""
-        if self.job_list:
-            self.current_job_index = (self.current_job_index + 1) % len(self.job_list)
-            self.set_current_job(self.job_list[self.current_job_index])
-            # Reset task to first task of new job
-            self.current_task_index = 0
-            if self.current_job.get('tasks'):
-                self.set_current_job_task(self.current_job['tasks'][0])
-            print(f"\n[DEBUG] Moved to job {self.current_job_index}: {self.current_job['short_name']}")
-
-    def previous_job(self):
-        """Move to the previous job in the list."""
-        if self.job_list:
-            self.current_job_index = (self.current_job_index - 1) % len(self.job_list)
-            self.set_current_job(self.job_list[self.current_job_index])
-            # Reset task to first task of new job
-            self.current_task_index = 0
-            if self.current_job.get('tasks'):
-                self.set_current_job_task(self.current_job['tasks'][0])
-            print(f"\n[DEBUG] Moved to job {self.current_job_index}: {self.current_job['short_name']}")
-
-    def next_task(self):
-        """Move to the next task in the current job."""
-        if self.current_job and self.current_job.get('tasks'):
-            tasks = self.current_job['tasks']
-            self.current_task_index = (self.current_task_index + 1) % len(tasks)
-            self.set_current_job_task(tasks[self.current_task_index])
-            self.timer.set_task_start_time()  # Reset task timer
-
-    def previous_task(self):
-        """Move to the previous task in the current job."""
-        if self.current_job and self.current_job.get('tasks'):
-            tasks = self.current_job['tasks']
-            self.current_task_index = (self.current_task_index - 1) % len(tasks)
-            self.set_current_job_task(tasks[self.current_task_index])
-            self.timer.set_task_start_time()  # Reset task timer
 
     def check_input(self):
         """Check for keyboard input without blocking."""
