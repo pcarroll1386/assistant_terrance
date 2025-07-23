@@ -1,0 +1,226 @@
+{
+    "jobs": [
+        {
+            "id": 1001,
+            "name": "Custom Baseball Cap",
+            "short_name": "c-ms01",
+            "ingress_date": "2025-07-15T08:30:00Z",
+            "start_date": "2025-07-16T09:00:00Z",
+            "tasks": [
+                {"id": 1, "name": "Pattern Cutting", "short_name": "cut"},
+                {"id": 2, "name": "Fabric Preparation", "short_name": "prep"},
+                {"id": 3, "name": "Steam Pressing", "short_name": "press"},
+                {"id": 4, "name": "Machine Sewing", "short_name": "sew"},
+                {"id": 6, "name": "Embroidery Work", "short_name": "embr"},
+                {"id": 9, "name": "Button Attachment", "short_name": "btn"},
+                {"id": 12, "name": "Quality Inspection", "short_name": "qc"},
+                {"id": 13, "name": "Final Pressing", "short_name": "fnlprs"},
+                {"id": 14, "name": "Packaging", "short_name": "pack"}
+            ]
+        },
+        {
+            "id": 1002,
+            "name": "Custom Hoodie",
+            "short_name": "c-ms02",
+            "ingress_date": "2025-07-15T10:15:00Z",
+            "start_date": "2025-07-17T10:30:00Z",
+            "tasks": [
+                {"id": 1, "name": "Pattern Cutting", "short_name": "cut"},
+                {"id": 2, "name": "Fabric Preparation", "short_name": "prep"},
+                {"id": 3, "name": "Steam Pressing", "short_name": "press"},
+                {"id": 4, "name": "Machine Sewing", "short_name": "sew"},
+                {"id": 8, "name": "Zipper Installation", "short_name": "zip"},
+                {"id": 18, "name": "Pocket Construction", "short_name": "pocket"},
+                {"id": 20, "name": "Sleeve Attachment", "short_name": "sleeve"},
+                {"id": 11, "name": "Seam Finishing", "short_name": "seam"},
+                {"id": 12, "name": "Quality Inspection", "short_name": "qc"},
+                {"id": 13, "name": "Final Pressing", "short_name": "fnlprs"},
+                {"id": 14, "name": "Packaging", "short_name": "pack"}
+            ]
+        },
+        {
+            "id": 1003,
+            "name": "Custom Evening Dress",
+            "short_name": "c-ms03",
+            "ingress_date": "2025-07-16T14:20:00Z",
+            "start_date": "2025-07-18T08:00:00Z",
+            "tasks": [
+                {"id": 1, "name": "Pattern Cutting", "short_name": "cut"},
+                {"id": 2, "name": "Fabric Preparation", "short_name": "prep"},
+                {"id": 15, "name": "Fitting Adjustment", "short_name": "fit"},
+                {"id": 24, "name": "Basting", "short_name": "baste"},
+                {"id": 3, "name": "Steam Pressing", "short_name": "press"},
+                {"id": 4, "name": "Machine Sewing", "short_name": "sew"},
+                {"id": 5, "name": "Hand Stitching", "short_name": "stitch"},
+                {"id": 8, "name": "Zipper Installation", "short_name": "zip"},
+                {"id": 21, "name": "Lining Installation", "short_name": "lining"},
+                {"id": 10, "name": "Hemming", "short_name": "hem"},
+                {"id": 11, "name": "Seam Finishing", "short_name": "seam"},
+                {"id": 12, "name": "Quality Inspection", "short_name": "qc"},
+                {"id": 13, "name": "Final Pressing", "short_name": "fnlprs"},
+                {"id": 14, "name": "Packaging", "short_name": "pack"}
+            ]
+        },
+        {
+            "id": 1004,
+            "name": "Custom Jacket",
+            "short_name": "c-ms04",
+            "ingress_date": "2025-07-17T11:45:00Z",
+            "start_date": "2025-07-19T09:30:00Z",
+            "tasks": [
+                {"id": 1, "name": "Pattern Cutting", "short_name": "cut"},
+                {"id": 2, "name": "Fabric Preparation", "short_name": "prep"},
+                {"id": 16, "name": "Interfacing Application", "short_name": "intrf"},
+                {"id": 3, "name": "Steam Pressing", "short_name": "press"},
+                {"id": 4, "name": "Machine Sewing", "short_name": "sew"},
+                {"id": 8, "name": "Zipper Installation", "short_name": "zip"},
+                {"id": 9, "name": "Button Attachment", "short_name": "btn"},
+                {"id": 18, "name": "Pocket Construction", "short_name": "pocket"},
+                {"id": 19, "name": "Collar Assembly", "short_name": "collar"},
+                {"id": 20, "name": "Sleeve Attachment", "short_name": "sleeve"},
+                {"id": 21, "name": "Lining Installation", "short_name": "lining"},
+                {"id": 11, "name": "Seam Finishing", "short_name": "seam"},
+                {"id": 12, "name": "Quality Inspection", "short_name": "qc"},
+                {"id": 13, "name": "Final Pressing", "short_name": "fnlprs"},
+                {"id": 14, "name": "Packaging", "short_name": "pack"}
+            ]
+        },
+        {
+            "id": 1005,
+            "name": "Custom Scarf",
+            "short_name": "c-ms05",
+            "ingress_date": "2025-07-17T16:30:00Z",
+            "start_date": "2025-07-20T13:15:00Z",
+            "tasks": [
+                {"id": 1, "name": "Pattern Cutting", "short_name": "cut"},
+                {"id": 2, "name": "Fabric Preparation", "short_name": "prep"},
+                {"id": 3, "name": "Steam Pressing", "short_name": "press"},
+                {"id": 4, "name": "Machine Sewing", "short_name": "sew"},
+                {"id": 17, "name": "Bias Tape Binding", "short_name": "bias"},
+                {"id": 10, "name": "Hemming", "short_name": "hem"},
+                {"id": 25, "name": "Overlock Finishing", "short_name": "ovrlck"},
+                {"id": 12, "name": "Quality Inspection", "short_name": "qc"},
+                {"id": 13, "name": "Final Pressing", "short_name": "fnlprs"},
+                {"id": 14, "name": "Packaging", "short_name": "pack"}
+            ]
+        },
+        {
+            "id": 2001,
+            "name": "Prefab T-Shirt",
+            "short_name": "pf-01",
+            "ingress_date": "2025-07-16T09:00:00Z",
+            "start_date": "2025-07-16T14:00:00Z",
+            "tasks": [
+                {"id": 2, "name": "Fabric Preparation", "short_name": "prep"},
+                {"id": 4, "name": "Machine Sewing", "short_name": "sew"},
+                {"id": 10, "name": "Hemming", "short_name": "hem"},
+                {"id": 25, "name": "Overlock Finishing", "short_name": "ovrlck"},
+                {"id": 12, "name": "Quality Inspection", "short_name": "qc"},
+                {"id": 13, "name": "Final Pressing", "short_name": "fnlprs"},
+                {"id": 14, "name": "Packaging", "short_name": "pack"}
+            ]
+        },
+        {
+            "id": 2002,
+            "name": "Prefab Polo Shirt",
+            "short_name": "pf-02",
+            "ingress_date": "2025-07-16T12:30:00Z",
+            "start_date": "2025-07-17T08:30:00Z",
+            "tasks": [
+                {"id": 2, "name": "Fabric Preparation", "short_name": "prep"},
+                {"id": 4, "name": "Machine Sewing", "short_name": "sew"},
+                {"id": 9, "name": "Button Attachment", "short_name": "btn"},
+                {"id": 19, "name": "Collar Assembly", "short_name": "collar"},
+                {"id": 10, "name": "Hemming", "short_name": "hem"},
+                {"id": 25, "name": "Overlock Finishing", "short_name": "ovrlck"},
+                {"id": 12, "name": "Quality Inspection", "short_name": "qc"},
+                {"id": 13, "name": "Final Pressing", "short_name": "fnlprs"},
+                {"id": 14, "name": "Packaging", "short_name": "pack"}
+            ]
+        },
+        {
+            "id": 2003,
+            "name": "Prefab Apron",
+            "short_name": "pf-03",
+            "ingress_date": "2025-07-17T08:15:00Z",
+            "start_date": "2025-07-17T15:00:00Z",
+            "tasks": [
+                {"id": 2, "name": "Fabric Preparation", "short_name": "prep"},
+                {"id": 4, "name": "Machine Sewing", "short_name": "sew"},
+                {"id": 17, "name": "Bias Tape Binding", "short_name": "bias"},
+                {"id": 10, "name": "Hemming", "short_name": "hem"},
+                {"id": 11, "name": "Seam Finishing", "short_name": "seam"},
+                {"id": 12, "name": "Quality Inspection", "short_name": "qc"},
+                {"id": 13, "name": "Final Pressing", "short_name": "fnlprs"},
+                {"id": 14, "name": "Packaging", "short_name": "pack"}
+            ]
+        },
+        {
+            "id": 2004,
+            "name": "Prefab Tote Bag",
+            "short_name": "pf-04",
+            "ingress_date": "2025-07-18T10:00:00Z",
+            "start_date": "2025-07-18T16:30:00Z",
+            "tasks": [
+                {"id": 2, "name": "Fabric Preparation", "short_name": "prep"},
+                {"id": 4, "name": "Machine Sewing", "short_name": "sew"},
+                {"id": 11, "name": "Seam Finishing", "short_name": "seam"},
+                {"id": 12, "name": "Quality Inspection", "short_name": "qc"},
+                {"id": 13, "name": "Final Pressing", "short_name": "fnlprs"},
+                {"id": 14, "name": "Packaging", "short_name": "pack"}
+            ]
+        },
+        {
+            "id": 2005,
+            "name": "Prefab Pillow Case",
+            "short_name": "pf-05",
+            "ingress_date": "2025-07-19T13:45:00Z",
+            "start_date": "2025-07-20T09:00:00Z",
+            "tasks": [
+                {"id": 2, "name": "Fabric Preparation", "short_name": "prep"},
+                {"id": 4, "name": "Machine Sewing", "short_name": "sew"},
+                {"id": 10, "name": "Hemming", "short_name": "hem"},
+                {"id": 11, "name": "Seam Finishing", "short_name": "seam"},
+                {"id": 12, "name": "Quality Inspection", "short_name": "qc"},
+                {"id": 13, "name": "Final Pressing", "short_name": "fnlprs"},
+                {"id": 14, "name": "Packaging", "short_name": "pack"}
+            ]
+        },
+        {
+            "id": 3001,
+            "name": "Custom Wedding Veil",
+            "short_name": "c-ms06",
+            "ingress_date": "2025-07-20T11:20:00Z",
+            "start_date": "2025-07-22T10:00:00Z",
+            "tasks": [
+                {"id": 1, "name": "Pattern Cutting", "short_name": "cut"},
+                {"id": 2, "name": "Fabric Preparation", "short_name": "prep"},
+                {"id": 3, "name": "Steam Pressing", "short_name": "press"},
+                {"id": 5, "name": "Hand Stitching", "short_name": "stitch"},
+                {"id": 7, "name": "Applique Application", "short_name": "appl"},
+                {"id": 17, "name": "Bias Tape Binding", "short_name": "bias"},
+                {"id": 10, "name": "Hemming", "short_name": "hem"},
+                {"id": 12, "name": "Quality Inspection", "short_name": "qc"},
+                {"id": 13, "name": "Final Pressing", "short_name": "fnlprs"},
+                {"id": 14, "name": "Packaging", "short_name": "pack"}
+            ]
+        },
+        {
+            "id": 3002,
+            "name": "Prefab Curtains",
+            "short_name": "pf-06",
+            "ingress_date": "2025-07-20T15:30:00Z",
+            "start_date": "2025-07-21T11:30:00Z",
+            "tasks": [
+                {"id": 2, "name": "Fabric Preparation", "short_name": "prep"},
+                {"id": 4, "name": "Machine Sewing", "short_name": "sew"},
+                {"id": 10, "name": "Hemming", "short_name": "hem"},
+                {"id": 22, "name": "Elastic Installation", "short_name": "elast"},
+                {"id": 11, "name": "Seam Finishing", "short_name": "seam"},
+                {"id": 12, "name": "Quality Inspection", "short_name": "qc"},
+                {"id": 13, "name": "Final Pressing", "short_name": "fnlprs"},
+                {"id": 14, "name": "Packaging", "short_name": "pack"}
+            ]
+        }
+    ]
+}

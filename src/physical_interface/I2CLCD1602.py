@@ -5,7 +5,6 @@
 # Author      : freenove
 # modification: 2023/05/15
 ########################################################################
-import smbus
 from time import sleep, strftime
 from datetime import datetime
 from LCD1602 import CharLCD1602
