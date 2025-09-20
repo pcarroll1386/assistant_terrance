@@ -55,28 +55,28 @@ class InputController:
         key_lower = key.lower()
         print(f"DEBUG: Processing key '{key_lower}'")
         
-        if key_lower == 'j' and 'next_job' in navigation_callbacks:
-            print("DEBUG: Calling next_job")
-            navigation_callbacks['next_job']()
+        if key_lower == 'j' and 'scroll_job' in navigation_callbacks:
+            print("\rDEBUG: Calling next_job")
+            navigation_callbacks['scroll_job']('next')
             return True
-        elif key_lower == 'k' and 'previous_job' in navigation_callbacks:
-            print("DEBUG: Calling previous_job")
-            navigation_callbacks['previous_job']()
+        elif key_lower == 'k' and 'scroll_job' in navigation_callbacks:
+            print("\rDEBUG: Calling previous_job")
+            navigation_callbacks['scroll_job']('previous')
             return True
-        elif key_lower == 'n' and 'next_task' in navigation_callbacks:
-            print("DEBUG: Calling next_task")
-            navigation_callbacks['next_task']()
+        elif key_lower == 'n' and 'scroll_task' in navigation_callbacks:
+            print("\rDEBUG: Calling next_task")
+            navigation_callbacks['scroll_task']('next')
             return True
-        elif key_lower == 'p' and 'previous_task' in navigation_callbacks:
-            print("DEBUG: Calling previous_task")
-            navigation_callbacks['previous_task']()
+        elif key_lower == 'm' and 'scroll_task' in navigation_callbacks:
+            print("\rDEBUG: Calling previous_task")
+            navigation_callbacks['scroll_task']('previous')
             return True
         elif key_lower == 'q' and 'quit' in navigation_callbacks:
-            print("DEBUG: Calling quit")
+            print("\rDEBUG: Calling quit")
             navigation_callbacks['quit']()
             return True
         else:
-            print(f"DEBUG: No action for key '{key_lower}'")
+            print(f"\rDEBUG: No action for key '{key_lower}'")
         
         return False
     
@@ -94,6 +94,6 @@ class InputController:
             "j = Next Job",
             "k = Previous Job", 
             "n = Next Task",
-            "p = Previous Task",
+            "m = Previous Task",
             "q = Quit"
         ]

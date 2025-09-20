@@ -26,8 +26,8 @@ class Controller(object):
 
     def shutdown(self):
         """Shutdown the controller."""
-        self.lcd.write(0, 0, "Exiting...")
-        self.lcd.write(0, 1, "Goodbye!")
+        self.lcd.write(0, 0, "\rExiting...")
+        self.lcd.write(0, 1, "\rGoodbye!")
         self.lcd.destroy()
         # Restore terminal settings
         self.input_controller._restore_terminal()
@@ -39,26 +39,22 @@ class Controller(object):
         return self.input_controller.check_input()
   
     def loop(self):
-        self.lcd.write(0, 0, "Good morning")
+        self.lcd.write(0, 0, "\rGood morning")
         time.sleep(.3)
         self.lcd.write(0, 1, "Ma'am:")
         time.sleep(1)
-        
-        self.job_list = self.job_service.get_active_jobs()
-        if not self.job_list:
-            self.lcd.write(0, 0, "No active jobs")
-            self.lcd.write(0, 1, "Please check later")
+
+        if not self.job_controller.jobs:
+            self.lcd.write(0, 0, "\rNo active jobs")
+            self.lcd.write(0, 1, "\rPlease check later")
             self.shutdown()
 
-        self._initialize_current_selections()
         self._display_controls()
         
-        # Setup navigation callbacks
+        # Setup navigation callbacks. This will need to be looked at it is very clunky. but for now it is kind of working
         navigation_callbacks = {
-            'next_job': self.next_job,
-            'previous_job': self.previous_job,
-            'next_task': self.next_task,
-            'previous_task': self.previous_task,
+            'scroll_job': self.job_controller.scroll_job,
+            'scroll_task': self.job_controller.scroll_task,
             'quit': self.shutdown
         }
         
@@ -67,29 +63,18 @@ class Controller(object):
                 # Check for key input and process
                 key = self.input_controller.check_input()
                 if key:
-                    print(f"\n[DEBUG] Key pressed: '{key}' (ord: {ord(key)})")
+                    print(f"\r[DEBUG] Key pressed: '{key}' (ord: {ord(key)})")
                     result = self.input_controller.process_navigation_input(key, navigation_callbacks)
                     if result:
-                        print(f"[DEBUG] Navigation action processed for key '{key}'")
+                        print(f"\r[DEBUG] Navigation action processed for key '{key}'")
                 
                 # Display current status
                 self._display_current_status()
                 
-                self.count += 1
                 time.sleep(0.1)  # Reduced sleep for more responsive input
                 
         except KeyboardInterrupt:
             self.shutdown()
-
-    def _initialize_current_selections(self):
-        """Initialize current job and task selections."""
-        if self.current_job == None:
-            self.set_current_job(self.job_list[0])
-
-        if self.current_job_task not in self.current_job.tasks:
-            tasks = self.current_job.tasks[0]
-            if tasks:
-                self.set_current_job_task(tasks[0])
 
     def _display_controls(self):
         """Display control instructions."""
@@ -100,6 +85,6 @@ class Controller(object):
 
     def _display_current_status(self):
         """Display current job and task status."""
-        if self.current_job and self.current_job_task:
-            self.lcd.write(0, 0, f"{self.current_job['short_name']} {self.current_job_task['short_name']}")
-            self.lcd.write(0, 1, f"{self.timer.get_daily_elapsed_time()} {self.timer.get_task_elapsed_time()}")
+        if self.job_controller.current_job and self.job_controller.current_job_task:
+            self.lcd.write(0, 0, f"\r{self.job_controller.current_job.short_name} {self.job_controller.current_job_task.short_name}")
+            self.lcd.write(0, 1, f"\r{self.timer.get_daily_elapsed_time()} {self.timer.get_task_elapsed_time()}")
